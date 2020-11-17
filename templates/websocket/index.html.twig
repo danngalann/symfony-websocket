@@ -45,12 +45,8 @@
     </div>
     <div>
         <div class="form-group">
-            <label for="name">Name:</label> 
-            <input type="text" id="name">
-        </div>
-        <div class="form-group">
             <label for="message">Message:</label> 
-            <input type="text" id="message">
+            <input type="text" id="message" class="form-control">
         </div>
         <button type="button" class="btn btn-secondary btn-block" id="sendBtn">Send</button>
     </div>
@@ -59,6 +55,7 @@
 {% block javascripts %}
 <script type="text/javascript">
     const socket = new WebSocket("ws://172.16.24.26:3001");
+    const userid = choose(["Manolo", "Miguel", "Peter", "Willy", "Sebastián"])
     
     // Open connection
     socket.addEventListener("open", function() {
@@ -68,7 +65,7 @@
     // Send messages
     document.getElementById("sendBtn").addEventListener("click", function() {
         const message = {
-            name: document.getElementById("name").value,
+            name: userid,
             message: document.getElementById("message").value
         };
         socket.send(JSON.stringify(message));
@@ -93,6 +90,11 @@
     function addMessage(name, message) {
         const messageHTML = "<div class='message'><strong>" + name + ":</strong> " + message + "</div>";
         document.getElementById("chat").innerHTML += messageHTML
+    }
+
+    function choose(choices) {
+        var index = Math.floor(Math.random() * choices.length);
+        return choices[index];
     }
 </script>
 {% endblock %}
