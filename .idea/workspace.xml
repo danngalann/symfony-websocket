@@ -20,8 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2eacf7bc-ea65-40a2-ac0b-50c5c80b6289" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Controller/WebsocketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/WebsocketController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/websocket/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/websocket/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +118,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605704202713</updated>
-      <workItem from="1605704203856" duration="1725000" />
+      <workItem from="1605704203856" duration="1973000" />
     </task>
     <servers />
   </component>

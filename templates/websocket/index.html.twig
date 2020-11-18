@@ -55,7 +55,7 @@
 {% endblock %}
 {% block javascripts %}
 <script type="text/javascript">
-    const socket = new WebSocket("ws://m9-websocket.herokuapp.com:3001");
+    const socket = new WebSocket("wss://m9-websocket.herokuapp.com:3001");
     // const socket = new WebSocket("ws://localhost:3001");
     const userid = choose(["Manolo", "Miguel", "Peter", "Willy", "Sebastián"])
     
