@@ -21,7 +21,8 @@
     #chat {
         height: 400px;
         width: 100%;
-        border: solid lightgrey 1px;
+        border: solid #8c8c8c 1px;
+        border-radius: 10px;
         overflow: auto;
         margin-bottom: 20px;
         margin-top: 20px;
@@ -35,7 +36,7 @@
         padding: 10px 5px;
         margin: 10px;
         border-radius: 5px;
-        background: #e2e2e2;
+        background: #d0d0d0;
     }
 </style>
  
@@ -45,7 +46,7 @@
     </div>
     <div>
         <div class="form-group">
-            <label for="message">Message:</label> 
+            <label for="message" class="text-light">Message:</label>
             <input type="text" id="message" class="form-control">
         </div>
         <button type="button" class="btn btn-secondary btn-block" id="sendBtn">Send</button>
@@ -54,7 +55,8 @@
 {% endblock %}
 {% block javascripts %}
 <script type="text/javascript">
-    const socket = new WebSocket("ws://172.16.24.26:3001");
+    const socket = new WebSocket("ws://m9-websocket.herokuapp.com:3001");
+    // const socket = new WebSocket("ws://localhost:3001");
     const userid = choose(["Manolo", "Miguel", "Peter", "Willy", "Sebastián"])
     
     // Open connection
